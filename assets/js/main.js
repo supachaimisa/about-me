@@ -29,6 +29,7 @@
 			}, 100);
 		});
 
+
 	// Nav.
 		$nav_links
 			.on('click', function(event) {
@@ -210,3 +211,114 @@
 		}
 
 })(jQuery);
+
+// A $( document ).ready() block.
+$(document).ready(function() {
+    // console.log( "ready!" );
+
+	var $skills_block = $('#skills-block');
+	const data_skills = [
+		[
+			{ name: 'JavaSctipt', logo_path: '/images/skills/Javascript-logo.png' },
+			{ name: 'TypeScript', logo_path: '/images/skills/Typescript.png' },
+			{ name: 'NodeJs\nExpressJs', logo_path: '/images/skills/nodejs-expressjs.png' },
+			{ name: 'NestJs', logo_path: '/images/skills/nestjs_logo_icon.png' },
+			{ name: 'GraphQL', logo_path: '/images/skills/graphQL.png' },
+			{ name: 'Mongodb', logo_path: '/images/skills/mongodb.png' },
+		],
+		[
+			{ name: 'Strapi', logo_path: '/images/skills/strapi.png' },
+			{ name: 'TypeORM', logo_path: '/images/skills/typeorm.png' },
+			{ name: 'Sequelize', logo_path: '/images/skills/sequelize.png' },
+			{ name: 'SQLserver', logo_path: '/images/skills/sqlserver.png' },
+			{ name: 'Git', logo_path: '/images/skills/git.jpg' },
+			{ name: 'Microsoft visual studio', logo_path: '/images/skills/Visual_Studio_Icon_2022.png' },
+		],
+		[
+			{ name: 'SQL', logo_path: '/images/skills/sql.png' },
+			{ name: 'ReactJs', logo_path: '/images/skills/reactjs.png' },
+			{ name: 'ReactNative', logo_path: '/images/skills/reactnative.png' },
+			{ name: 'AngularJs', logo_path: '/images/skills/angularjs.png' },
+			{ name: 'Elastic search', logo_path: '/images/skills/elasticsearch.png' },
+			{ name: 'Jenkins', logo_path: '/images/skills/jenkins.png' },
+		],
+	];
+
+	// Render
+	let template_skills = ``;
+	// console.log('template_skills: ', template_skills);
+	for (let i = 0; i < data_skills.length; i++) {
+		const item = data_skills[i];
+		const sk1 = item[0];
+		const sk2 = item[1];
+		const sk3 = item[2];
+		const sk4 = item[3];
+		const sk5 = item[4];
+		const sk6 = item[5];
+
+		const col_sk1 = `
+		<div class="col-4">
+			<img  src="${sk1.logo_path}" width="100px" alt="">
+			<br>
+			${sk1.name}
+		</div>
+		`;
+		const col_sk2 = `
+		<div class="col-4">
+			<img  src="${sk2.logo_path}" width="100px" alt="">
+			<br>
+			${sk2.name}
+		</div>
+		`;
+		const col_sk3 = `
+		<div class="col-4">
+			<img  src="${sk3.logo_path}" width="100px" alt="">
+			<br>
+			${sk3.name}
+		</div>
+		`;
+		const col_sk4 = `
+		<div class="col-4">
+			<img  src="${sk4.logo_path}" width="100px" alt="">
+			<br>
+			${sk4.name}
+		</div>
+		`;
+		const col_sk5 = `
+		<div class="col-4">
+			<img  src="${sk5.logo_path}" width="100px" alt="">
+			<br>
+			${sk5.name}
+		</div>
+		`;
+		const col_sk6 = `
+		<div class="col-4">
+			<img  src="${sk6.logo_path}" width="100px" alt="">
+			<br>
+			${sk6.name}
+		</div>
+		`;
+
+		template_skills += `
+		<div class="row"  style="overflow-wrap: break-word; margin-bottom: 1em;">
+			<div class="col-6">
+				<div class="row">
+					${col_sk1}
+					${col_sk2}
+					${col_sk3}
+				</div>
+				
+			</div>
+			<div class="col-6">
+				<div class="row">
+					${col_sk4}
+					${col_sk5}
+					${col_sk6}
+				</div>
+			</div>
+		</div>
+		`
+	}
+
+	$skills_block.html(template_skills);
+});

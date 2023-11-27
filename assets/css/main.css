@@ -2214,3 +2214,28 @@ input, select, textarea {
 		.separator:not(:empty)::after {
 			margin-left: .25em;
 		}
+
+		/* card-skill */
+		.card-skill{
+			width: 100%;
+			background-color: #ffffff;
+		}
+
+		/* CSS for mobile devices */
+		@media (max-width: 768px) {
+			.card-skill .row {
+			flex-direction: column;
+			}
+			.card-skill .col-6 {
+			width: 100%;
+			}
+			.card-skill .col-4 {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+			}
+			.card-skill img {
+			display: block;
+			margin: 0 auto;
+			}
+  		}
