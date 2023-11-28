@@ -227,7 +227,7 @@ $(document).ready(function() {
 			{ name: 'Mongodb', logo_path: 'images/skills/mongodb.png' },
 		],
 		[
-			{ name: 'Strapi', logo_path: 'images/skills/strapi.png' },
+			{ name: 'Strapi', logo_path: 'images/skills/strapi.PNG' },
 			{ name: 'TypeORM', logo_path: 'images/skills/typeorm.png' },
 			{ name: 'Sequelize', logo_path: 'images/skills/sequelize.png' },
 			{ name: 'SQLserver', logo_path: 'images/skills/sqlserver.png' },
